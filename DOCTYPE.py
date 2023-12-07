@@ -5,9 +5,12 @@ import requests
 from colorama import Fore
 from art import text2art
 import random
+from playsound import playsound
 Gr = '\033[1;32m'
 Wh = '\033[1;37m'
 
+file_path = "welcome.mp3"
+playsound(file_path)
 
 def main():
     print('=================================================')
@@ -94,15 +97,20 @@ elif option == '2':
 
 
 elif option == '3':
-    def ascii_art():
-        input_text = input("Enter text: ")
+ def ascii_art():
+    while True:
+        input_text = input("Enter text (press 'q' to quit): ")
+        
+        if input_text.lower() == 'q':
+            break
+        
         available_fonts = ['block', 'starwars', 'acrobatic', '3d', 'doh', 'isometric1', 'letters', 'bulbhead', 'alligator']
         random_font = random.choice(available_fonts)
         art = text2art(text=input_text, font=random_font, chr_ignore=True)
         print(art)
 
-    if __name__ == "__main__":
-        ascii_art()
+if __name__ == "__main__":
+    ascii_art()
 
 elif option == '0':
     def text_to_speech(text):
