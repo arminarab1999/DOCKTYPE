@@ -3,3 +3,4 @@ pytube
 pyttsx3
 art
 colorama
+playsound
