@@ -9,9 +9,6 @@ from playsound import playsound
 Gr = '\033[1;32m'
 Wh = '\033[1;37m'
 
-file_path = "welcome.mp3"
-playsound(file_path)
-
 def main():
     print('=================================================')
     print('               created by DOCTYPE_GROUP          ')
