@@ -5,6 +5,10 @@
 
 . apt upgrade
 
+. git clone https://github.com/arminarab1999/DOCKTYPE.git
+
+. cd DOCKTYPE
+
 . pip install -r requirements.txt
 
 . python3 DOCTYPE.py
